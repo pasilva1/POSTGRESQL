@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres_mvp
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: mvp_db
+      POSTGRES_USER: mvp_user
+      POSTGRES_PASSWORD: mvp_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - /home/giovanna/Documents/Backup/CONTAINERS/POSTGRESQL/postgres/_data:/var/lib/postgresql/data
+#      - /home/giovanna/Documentos/CONTAINERS/POSTGRESQL/postgres/_data:/var/lib/postgresql/data
+#      - postgres_data:/var/lib/postgresql/data
+
+#volumes:
+#  postgres_data:
+
